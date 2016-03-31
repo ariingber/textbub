@@ -5,8 +5,9 @@ class ReviewsController < ApplicationController
 
   def create
     message_body = params["Body"]
-    from_number = params["From"]
-    Review.create(content: message_body)
+    # from_number = params["From"]
+    @review = Review.create(content: message_body)
+    redirect_to review_path(@review)
   end
 
   def show
