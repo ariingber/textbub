@@ -1,7 +1,4 @@
 # Project #4: TextBub
-It's and easier way to leave a review for a service provider -- via text.
-
-
 ​
 ![alt text](TR.png)
 ​
