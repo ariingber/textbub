@@ -16,3 +16,16 @@ end ```
 - added above to users table
 - uncommented bcrypt from gem file
 - run install bundle
+- created user.rb in models directory
+class User < ActiveRecord::Base
+  has_many :reviews, dependent: :destroy
+  validates :username, presence: true, uniqueness: true
+  has_secure_password
+end
+
+- created review.rb in models directory
+
+class Review < ActiveRecord::Base
+  belongs_to :user
+end
+- temp root root to: 'users#new'
