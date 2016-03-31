@@ -19,8 +19,8 @@ This application will allow people to leave one review (via text message) for ma
 * gems - brcrypt
 ​
 ---
----
 ​
+
 ### User Stories for Service Providers:
 #### Authentication
 * As a user, there should be a landing page that allows me to sign up/login for the application
