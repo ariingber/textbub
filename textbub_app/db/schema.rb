@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160331002218) do
     t.integer "user_id"
     t.string  "content"
     t.string  "service_providers_name"
-    t.integer "review_phone"
+    t.string  "review_phone"
   end
 
   create_table "users", force: :cascade do |t|
