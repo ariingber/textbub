@@ -4,6 +4,15 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
 
+  def create
+    require 'sinatra'
+    require 'twilio-ruby'
+    content_type 'text/xml'
+    response = Twilio::TwiML::Response.new do |r|
+      r.Message 'Hey thanks for my message'
+    end
+    response.to_xml
+  end
 
   def show
     @review = Review.find(params[:id])
