@@ -8,10 +8,12 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    skip_before_filter  :verify_authenticity_token
+    puts 'you are in create'
     message_body = params["Body"]
+    puts message_body
     # from_number = params["From"]
     @review = Review.create(content: message_body)
-    redirect_to review_path(@review)
   end
 
   def show
