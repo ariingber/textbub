@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   skip_before_filter  :verify_authenticity_token
-  
+
   def index
     @reviews = Review.all
   end
@@ -10,12 +10,11 @@ class ReviewsController < ApplicationController
   end
 
   def create
-
-    puts 'you are in create'
     message_body = params["Body"]
-    puts message_body
-    # from_number = params["From"]
-    @review = Review.create(content: message_body)
+    splitBody = message_body.split()
+    service_providers_name = splitBody[0]
+    from_number = params["From"]
+    @review = Review.create(content: message_body, review_phone: from_number, service_providers_name: service_providers_name)
   end
 
   def show
