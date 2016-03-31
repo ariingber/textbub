@@ -1,6 +1,7 @@
 <h4>Reviews</h4><br>
 <% @reviews.each do |review| %>
   <div>
-    <h5>Review: <%= review.content %></h5>
+    <h5>Content: <%= review.content %></h5>
+    <h5>Caller's Number: <%= review.review_phone %></h5>
   </div><br><br>
 <% end %>
