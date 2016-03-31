@@ -4,7 +4,7 @@ class CreateReviews < ActiveRecord::Migration
       t.references :user
       t.string :content
       t.string :service_providers_name
-      t.integer :review_phone
+      t.bigint :review_phone
     end
   end
 end
