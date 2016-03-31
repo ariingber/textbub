@@ -4,8 +4,9 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.create(review_params)
-
+    message_body = params["Body"]
+    from_number = params["From"]
+    Review.create(content: message_body)
   end
 
   def show
