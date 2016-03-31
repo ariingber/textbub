@@ -1,4 +1,4 @@
-# Project #4: TextBub
+### Project #4: TextReviews
 ​
 ![alt text](TR.png)
 ​
@@ -19,8 +19,9 @@ This application will allow people to leave one review (via text message) for ma
 * gems - brcrypt
 ​
 ---
+<!-- ### Installation Instructions(To be Added): -->
+---
 ​
-
 ### User Stories for Service Providers:
 #### Authentication
 * As a user, there should be a landing page that allows me to sign up/login for the application
@@ -46,4 +47,6 @@ This application will allow people to leave one review (via text message) for ma
 #### Service Provider Seeker User Stroies
 * As a service provider seeker, I should be able to scan the site without logging in.
 * As a service provider seeker, I should be able to search a service provider by name, city, and service provided title.
+​
+---
 ​
