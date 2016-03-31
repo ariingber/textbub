@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TextbubApp</title>
+  <title>RestaurantApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <ul>
+    <li>
+      <h1>TextBub</h1>
+    </li>
+    <li><button>
+      <%= link_to "Sign Up", root_path %>
+    </button></li>
+    <li><button>
+      <%= link_to "Log In", root_path %>
+    </button></li>
+    <li><button>
+      <%= link_to "Browse", root_path %>
+    </button></li>
+  </ul>
 
 <%= yield %>
 

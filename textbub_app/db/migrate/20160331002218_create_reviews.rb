@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.references :user
       t.string :content
-      t.number :review_phone
+      t.integer :review_phone
     end
   end
 end
