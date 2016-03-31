@@ -11,10 +11,10 @@ class ReviewsController < ApplicationController
 
   def create
     message_body = params["Body"]
-    splitBody = message_body.split()
-    service_providers_name = splitBody[0]
-    from_number = params["From"]
-    @review = Review.create(content: message_body, review_phone: from_number, service_providers_name: service_providers_name)
+    # splitBody = message_body.split()
+    # service_providers_name = splitBody[0]
+    # from_number = params["From"]
+    @review = Review.create(content: message_body)
   end
 
   def show
