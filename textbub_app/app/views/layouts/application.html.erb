@@ -11,14 +11,22 @@
     <li>
       <h1>TextBub</h1>
     </li>
+    <% if session[:current_user_id] %>
+      <li><button>
+        <%= link_to "Logout", sessions_path, method: :delete %>
+      </button></li>
+      <button><%= link_to "#{User.find(session[:current_user_id]).handle}'s profile",
+        user_path(session[:current_user_id]) %></button> <br/>
+    <% else %>
+      <li><button>
+        <%= link_to "Sign Up", new_user_path %>
+      </button></li>
+      <li><button>
+        <%= link_to "Log In", users_path %>
+      </button></li>
+    <% end %>
     <li><button>
-      <%= link_to "Sign Up", new_user_path %>
-    </button></li>
-    <li><button>
-      <%= link_to "Log In", users_path %>
-    </button></li>
-    <li><button>
-      <%= link_to "Browse", root_path %>
+      <%= link_to "Just Browse", root_path %>
     </button></li>
   </ul>
 
