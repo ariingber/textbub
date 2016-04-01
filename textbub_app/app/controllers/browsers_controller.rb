@@ -10,6 +10,7 @@ class BrowsersController < ApplicationController
   end
 
   def result
+    @display = []
     @reviews = Review.all
     @users = User.all
     @name = params["name"]

@@ -1,8 +1,20 @@
 <div class="search form">
   <h5>Search By</h5>
   <%= form_tag("./search", method: "get") do %>
-    <%= label_tag(:name, "Search for:") %>
+    <%= label_tag(:name, "User Name:") %>
     <%= text_field_tag(:name) %>
+    <%= label_tag(:email, "Email:") %>
+    <%= text_field_tag(:email) %>
+    <%= label_tag(:handle, "User Handle:") %>
+    <%= text_field_tag(:handle) %>
+    <%= label_tag(:business_name, "Busines Name:") %>
+    <%= text_field_tag(:business_name) %>
+    <%= label_tag(:service_provided, "Service Provided:") %>
+    <%= text_field_tag(:service_provided) %><br/>
+    <%= label_tag(:city, "City:") %>
+    <%= text_field_tag(:city) %><br/>
+    <%= label_tag(:zipcode, "Zipcode:") %>
+    <%= text_field_tag(:zipcode) %><br/>
     <%= submit_tag("Search") %>
   <% end %>
 </div>
