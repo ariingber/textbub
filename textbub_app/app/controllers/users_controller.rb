@@ -3,9 +3,24 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @user = User.new
+  end
+
+  # def create
+  #   @user = User.create(user_params)
+  #   redirect_to user_path(@user)
+  # end
+
   def create
-    @user = User.create(user_params)
-    redirect_to user_path(@user)
+    @user = User.new(user_params)
+
+    if @user.save
+      session[:current_user_id] = @user.id
+      redirect_to user_path(@user)
+    else
+      redirect_to new_user_path(@user)
+    end
   end
 
   def show
