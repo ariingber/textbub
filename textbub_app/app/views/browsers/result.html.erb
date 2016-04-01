@@ -1,0 +1,11 @@
+<h5>you are in results</h5?>
+  <%= @name %>
+
+  <% @users.each do |user| %>
+  <div>
+    <% if user.name == @name %>
+        <h5>User Name: <%= user.name %></h5>
+    <% else %>
+    <% end %>
+  </div>
+<% end %>

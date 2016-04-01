@@ -9,9 +9,14 @@ class BrowsersController < ApplicationController
   def new
   end
 
+  def result
+    @reviews = Review.all
+    @users = User.all
+    @name = params["name"]
+  end
+
   def search
     params
-    binding.pry
-    # compare params to review and users
+    redirect_to browsers_result_path(params)
   end
 end
