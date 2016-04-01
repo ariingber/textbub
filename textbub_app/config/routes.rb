@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'users#new'
+  root to: 'welcome#index'
+  resources :users, only: [:new, :create, :show, :destroy]
   resources :reviews
   get 'texts/send_text_message' => 'texts#send_text_message'
   # The priority is based upon order of creation: first created -> highest priority.

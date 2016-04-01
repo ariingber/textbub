@@ -24,9 +24,13 @@ ActiveRecord::Schema.define(version: 20160331002218) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "handle"
+    t.string   "business_name"
+    t.string   "service_provided"
+    t.string   "about_me"
     t.string   "email"
     t.string   "password_digest"
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
