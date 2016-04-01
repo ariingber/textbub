@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20160331002218) do
     t.string   "service_provided"
     t.string   "about_me"
     t.string   "email"
+    t.string   "zipcode"
+    t.string   "city"
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
