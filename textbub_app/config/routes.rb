@@ -2,9 +2,12 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
   resources :users, only: [:new, :create, :show, :destroy, :index, :edit]
   resources :reviews
+  resources :browsers, only: [:new, :search]
+  get 'browsers/search' => 'browsers#search'
   get 'sessions/new' => 'sessions#new'
   post 'sessions' => 'sessions#create'
   delete 'sessions' => 'sessions#destroy'
+  
   get 'texts/send_text_message' => 'texts#send_text_message'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
