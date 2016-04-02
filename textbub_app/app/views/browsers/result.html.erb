@@ -2,5 +2,13 @@
   <% @results.each do |result| %>
   <div>
         <h5>User Name: <%= result.name %></h5>
+        <h5>User Handle: <%= result.handle %></h5>
   </div>
+  <% @reviews.each do |review| %>
+    <% if review.handle ==  result.handle %>
+      <div>
+        <p>* <%= review.content %></p>
+      </div>
+      <% end %>
+  <% end %>
 <% end %>

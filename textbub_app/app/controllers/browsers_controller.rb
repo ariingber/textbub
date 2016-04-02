@@ -13,6 +13,7 @@ class BrowsersController < ApplicationController
     @results = []
     #@reviews = Review.all
     @users = User.all
+    @reviews = Review.all
     @name = params["name"]
     @email = params["email"]
     @handle = params["handle"]
