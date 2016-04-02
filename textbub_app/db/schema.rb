@@ -17,10 +17,9 @@ ActiveRecord::Schema.define(version: 20160331002218) do
   enable_extension "plpgsql"
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "user_id"
-    t.string  "content"
-    t.string  "service_providers_name"
-    t.string  "review_phone"
+    t.string "content"
+    t.string "handle"
+    t.string "review_phone"
   end
 
   create_table "users", force: :cascade do |t|
