@@ -9,7 +9,7 @@
 <body>
   <ul>
     <li>
-      <h1>TextBub</h1>
+      <h1>TextBub <i class="fa fa-mobile"></i> </h1>
     </li>
     <% if session[:current_user_id] %>
       <li><button>
@@ -26,7 +26,7 @@
       </button></li>
     <% end %>
     <li><button>
-      <%= link_to "Just Browse", new_browser_path %>
+      <%= link_to "Search", new_browser_path %>
     </button></li>
   </ul>
 
