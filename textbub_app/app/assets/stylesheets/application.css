@@ -31,5 +31,11 @@
 
    .phoneimg {
      border: solid black 3px;
-     margin-left: 95px
+     margin-left: 95px;
+   }
+   .ctitle {
+     text-align: center;
+   }
+   #reviewcol {
+     text-align: center;
    }

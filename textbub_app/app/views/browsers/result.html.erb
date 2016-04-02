@@ -1,14 +1,35 @@
-<h5>you are in results</h5?>
+<h5>Search Results</h5>
   <% @results.each do |result| %>
-  <div>
-        <h5>User Name: <%= result.name %></h5>
-        <h5>User Handle: <%= result.handle %></h5>
-  </div>
-  <% @reviews.each do |review| %>
-    <% if review.handle ==  result.handle %>
-      <div>
-        <p>* <%= review.content %></p>
-      </div>
+  <div class="row">
+    <div class="six columns">
+        <p>
+          Name: <%= result.name %> || Handle: <%= result.handle %>
+        </p>
+        <p>
+          Business Name: <%= result.business_name %>
+        </p>
+        <p>
+          Service Provided: <%= result.service_provided %>
+        </p>
+        <p>
+          City: <%= result.city %> || Zip: <%= result.zipcode %>
+        </p>
+        <p>
+          Email: <%= result.email %>
+        </p>
+    </div>
+    <div class="six columns">
+      <h5>Reviews of <%= result.name %></h5>
+      <% @reviews.each do |review| %>
+        <% if review.handle ==  result.handle %>
+          <div>
+            <p>* <%= review.content %></p>
+          </div>
+          <% end %>
       <% end %>
-  <% end %>
+    </div>
+  </div>
+
+
+
 <% end %>
