@@ -1,20 +1,29 @@
-<div id="user-page">
-  <h3><%= @user.name%>'s page</h3>
-  <p>handle: <%= @user.handle%></p>
-  <p>business_name: <%= @user.business_name%></p>
-  <p>service_provided: <%= @user.service_provided%></p>
-  <p>about_me: <%= @user.about_me%></p>
-  <p>email: <%= @user.email%></p>
-  <h5>Reviews of <%= @user.name%> </h5>
-  <% @reviews.each do |review| %>
-    <% if review.handle ==  @user.handle %>
-      <div>
+  <div class="row">
+    <div class="six columns col_one_title">
+      <h5><%= @user.name%>'s Info</h5>
+      <p>handle: <%= @user.handle%></p>
+      <p>business_name: <%= @user.business_name%></p>
+      <p>service_provided: <%= @user.service_provided%></p>
+      <p>about_me: <%= @user.about_me%></p>
+      <p>email: <%= @user.email%></p>
+    </div>
+    <div class="six columns col_one_title">
+      <h5>Reviews of <%= @user.name%> </h5>
+
+      <% @reviews.each do |review| %>
+
+        <% if review.handle ==  @user.handle %>
         <p>* <%= review.content %></p>
+        <% end %>
+        <% end %>
       </div>
-      <% end %>
-  <% end %>
-  <% if session[:current_user_id] %>
-    <button><%= link_to "Delete", user_path(@user), method: :delete %></button>
-    <button><%= link_to "Edit", edit_user_path(@user)  %></button>
-  <% end %>
+</div>
+
+<div class="row">
+  <div class="twelve columns col_one_title">
+    <% if session[:current_user_id] %>
+      <button><%= link_to "Delete", user_path(@user), method: :delete %></button>
+      <button><%= link_to "Edit", edit_user_path(@user)  %></button>
+    <% end %>
+  </div>
 </div>

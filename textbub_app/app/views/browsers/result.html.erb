@@ -1,7 +1,8 @@
-<h5>Search Results</h5>
+
   <% @results.each do |result| %>
   <div class="row">
-    <div class="six columns">
+    <div class="six columns col_one_title">
+        <h5>Search Results</h5>
         <p>
           Name: <%= result.name %> || Handle: <%= result.handle %>
         </p>
@@ -18,7 +19,7 @@
           Email: <%= result.email %>
         </p>
     </div>
-    <div class="six columns">
+    <div class="six columns col_one_title">
       <h5>Reviews of <%= result.name %></h5>
       <% @reviews.each do |review| %>
         <% if review.handle ==  result.handle %>

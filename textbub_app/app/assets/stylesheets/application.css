@@ -36,6 +36,10 @@
    .ctitle {
      text-align: center;
    }
+   .col_one_title{
+     margin-top: 20px;
+     text-align: center;
+   }
    #reviewcol {
      text-align: center;
    }
