@@ -1,5 +1,12 @@
 <% if session[:current_user_id] %>
   <h5>Hey Member, Thanks for Logging into TextBub</h5>
 <% else %>
-  <h5>hello and welcome to textbub please feel free to just browse our site, login, or sign up</h5>
+  <br><br>
+  <div class="row">
+    <%= image_tag "phonegrab.PNG", size: "350x600", class: "phoneimg" %>
+    <div class="five columns"><h5> What's TextBub?<br/> TextBub allows coustomers to reveiw service providers via text message.<br/><br/></i> How's it work?<br/>  To use it text 1(646)455-3611 a message that starts with the service provider's handle followed by the review.  Check out the example to the right. <i class="fa fa-hand-o-right"></i><br/><br/>  To find a service provider's handle hit the search button, or if you are a service prodiver that would like to set up a profile on textbub hit the sign up button.
+    </h5></div>
+
+  </div>
+
 <% end %>
