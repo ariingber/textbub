@@ -1,27 +1,42 @@
 <div class="form">
-  <h5>Not a member yet?  Sign Up</h5>
+  <div class ="row">
+    <div class = "twelve colums">
+      <h5 class="col_one_title">Not a member yet?  Sign Up</h5>
+    </div>
+  </div>
   <%= form_for @user do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name%><br>
-    <%= f.label :email %>
-    <%= f.text_field :email %><br>
-    <%= f.label :handle %>
-    <%= f.text_field :handle%><br>
-    <%= f.label :business_name %>
-    <%= f.text_field :business_name%><br>
-    <%= f.label :service_provided %>
-    <%= f.text_field :service_provided%><br>
-    <%= f.label :about_me %>
-    <%= f.text_field :about_me%><br>
-    <%= f.label :city %>
-    <%= f.text_field :city %><br>
-    <%= f.label :zipcode %>
-    <%= f.text_field :zipcode %><br>
-    <%= f.label :password %>
-    <%= f.password_field :password %><br>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %><br>
+  <div class=row>
+    <div class="six columns col_one_title">
+      <%= f.label :name %>
+      <%= f.text_field :name%><br>
+      <%= f.label :email %>
+      <%= f.text_field :email %><br>
+      <%= f.label :handle %>
+      <%= f.text_field :handle%><br>
+      <%= f.label :business_name %>
+      <%= f.text_field :business_name%><br>
+      <%= f.label :service_provided %>
+      <%= f.text_field :service_provided%><br>
+    </div>
+    <div class=row>
+      <div class="six columns col_one_title">
+      <%= f.label :about_me %>
+      <%= f.text_field :about_me%><br>
+      <%= f.label :city %>
+      <%= f.text_field :city %><br>
+      <%= f.label :zipcode %>
+      <%= f.text_field :zipcode %><br>
+      <%= f.label :password %>
+      <%= f.password_field :password %><br>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %><br>
     <br>
-    <%= f.submit "Sign up" %> <br>
-   <% end %>
+    </div>
+  </div>
+  <div class ="row">
+    <div class = "twelve colums col_one_title">
+      <%= f.submit "Sign up" %> <br>
+       <% end %>
+     </div>
+  </div>
 </div>

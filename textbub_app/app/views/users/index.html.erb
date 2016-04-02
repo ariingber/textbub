@@ -5,7 +5,6 @@
         user_path(session[:current_user_id]) %> ||
       <%= link_to "Logout", sessions_path, method: :delete %>
     <% else %>
-      <p>Already A Memeber</p>
       <%= form_tag(sessions_path) do%>
         <%= label_tag :name %>
         <%= text_field_tag :name %>
