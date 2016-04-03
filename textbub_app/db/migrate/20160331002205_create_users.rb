@@ -1,6 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
+      t.attachment :image
       t.string :name
       t.string :handle
       t.string :business_name
