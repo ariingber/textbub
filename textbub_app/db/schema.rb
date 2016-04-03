@@ -23,6 +23,10 @@ ActiveRecord::Schema.define(version: 20160331002218) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.string   "name"
     t.string   "handle"
     t.string   "business_name"

@@ -3,8 +3,11 @@
   <div class="row">
     <div class="six columns col_one_title">
         <h5>Search Results</h5>
+        <%= image_tag(result.image(:medium), size: "150x150", class: "img-responsive") %>
         <p>
-          Name: <%= result.name %> || Handle: <%= result.handle %>
+          Name: <%= result.name %> </p>
+        <p>
+          Handle: <%= result.handle %>
         </p>
         <p>
           Business Name: <%= result.business_name %>
@@ -13,7 +16,9 @@
           Service Provided: <%= result.service_provided %>
         </p>
         <p>
-          City: <%= result.city %> || Zip: <%= result.zipcode %>
+          City: <%= result.city %> </p>
+        <p>
+          Zip: <%= result.zipcode %>
         </p>
         <p>
           Email: <%= result.email %>

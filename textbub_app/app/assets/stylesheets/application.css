@@ -28,6 +28,9 @@
      margin: 0 auto;
      text-align: center;
    }
+   p {
+     margin-bottom: -4px;
+   }
 
    .phoneimg {
      border: solid black 3px;

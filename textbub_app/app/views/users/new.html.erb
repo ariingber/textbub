@@ -4,11 +4,10 @@
       <h5 class="col_one_title">Not a member yet?  Sign Up</h5>
     </div>
   </div>
-  <%= form_for @user do |f| %>
+  <%= simple_form_for @user do |f| %>
   <div class=row>
     <div class="six columns col_one_title">
-      <%= f.label :image %>
-      <%= f.input :image%><br>
+      <%= f.input :image %><br>
       <%= f.label :name %>
       <%= f.text_field :name%><br>
       <%= f.label :email %>
