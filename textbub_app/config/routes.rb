@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'welcome#index'
-  resources :users, only: [:new, :create, :show, :destroy, :index, :edit]
+  resources :users
   resources :reviews
   resources :browsers, only: [:new, :search]
   get 'browsers/search' => 'browsers#search'

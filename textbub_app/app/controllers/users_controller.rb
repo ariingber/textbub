@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
-
   end
 
   def index
-    @user = User.new
   end
+
 
   # def create
   #   @user = User.create(user_params)
@@ -34,6 +33,9 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update_attributes(user_params)
+      redirect_to User.find(params[:id])
   end
 
   def destroy

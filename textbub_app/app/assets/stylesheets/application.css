@@ -31,6 +31,9 @@
    p {
      margin-bottom: -4px;
    }
+   .nav {
+     margin-top: -65px;
+   }
 
    .phoneimg {
      border: solid black 3px;
@@ -40,7 +43,7 @@
      text-align: center;
    }
    .col_one_title{
-     margin-top: 20px;
+     margin-top: 10px;
      text-align: center;
    }
    #reviewcol {
