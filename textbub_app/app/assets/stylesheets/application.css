@@ -17,6 +17,10 @@
  /*
  *= require font-awesome
  */
+#mainT {
+  margin-left: 90px;
+}
+
  li {
      list-style-type: none;
      display: inline;
@@ -29,6 +33,8 @@
      text-align: center;
    }
    p {
+     text-align: left;
+     margin-left: 110px;
      margin-bottom: -4px;
    }
    .nav {

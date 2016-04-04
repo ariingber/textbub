@@ -1,8 +1,8 @@
 
   <% @results.each do |result| %>
   <div class="row">
-    <div class="six columns col_one_title">
-        <h5>Search Results</h5>
+    <div class="four columns col_one_title">
+        <h5>Search Result</h5>
         <%= image_tag(result.image(:medium), size: "150x150", class: "img-responsive") %>
         <p>
           Name: <%= result.name %> </p>
@@ -15,6 +15,8 @@
         <p>
           Service Provided: <%= result.service_provided %>
         </p>
+        <p>About:</p>
+        <p> <%= result.about_me %> </p>
         <p>
           City: <%= result.city %> </p>
         <p>
@@ -23,19 +25,23 @@
         <p>
           Email: <%= result.email %>
         </p>
+        <p>
+          Link to Profile:
+          <br>
+          <a href=<%="https://textbub.herokuapp.com/users/" + result.id.to_s%>><%="https://textbub.herokuapp.com/users/" + result.id.to_s%></a>
+        </p><br><br>
     </div>
-    <div class="six columns col_one_title">
+    <div class="four columns col_one_title">
       <h5>Reviews of <%= result.name %></h5>
+      <div class="scroll" style="height:375px;width:427px;border:1px solid #ccc;font:16px/26px; overflow:auto;">
       <% @reviews.each do |review| %>
         <% if review.handle ==  result.handle %>
           <div>
-            <p>* <%= review.content %></p>
+            <p> <%= review.content %></p>
           </div>
           <% end %>
       <% end %>
     </div>
+    </div>
   </div>
-
-
-
 <% end %>

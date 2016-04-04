@@ -5,14 +5,14 @@
       <p>Handle: <%= @user.handle%></p>
       <p>Business Name: <%= @user.business_name%></p>
       <p>Service Provided: <%= @user.service_provided%></p>
-      <p>About: <%= @user.about_me%></p>
+      <p>About:</p><p> <%= @user.about_me%></p>
       <p>Email: <%= @user.email%></p>
-      <p>Link To TextBub Reviews:</p>
-      <a href=<%="https://textbub.herokuapp.com/users/" + @user.id.to_s%>><%="https://textbub.herokuapp.com/users/" + @user.id.to_s%></a>
+      <p>City: <%= @user.city %> </p>
+      <p>Zip: <%= @user.zipcode %></p><br><br>
     </div>
     <div class="four columns col_one_title">
       <h5><%= @user.name%>'s Reviews</h5>
-      <div class="scroll" style="height:290px;width:427px;border:1px solid #ccc;font:16px/26px; overflow:auto;">
+      <div class="scroll" style="height:325px;width:427px;border:1px solid #ccc;font:16px/26px; overflow:auto;">
         <% @reviews.each do |review| %>
           <% if review.handle ==  @user.handle %>
           <p><%= review.content %></p>
