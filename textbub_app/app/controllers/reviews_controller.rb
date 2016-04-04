@@ -19,7 +19,7 @@ class ReviewsController < ApplicationController
     else
       @review = Review.create(content: message_body, review_phone: from_number, handle: handle)
         Review.where(handle: handle).each do |rev|
-          if rev.review_phone == @review.review_phone
+          if rev.review_phone != @review.review_phone
             @review.destroy
           end
         end
