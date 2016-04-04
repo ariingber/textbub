@@ -46,6 +46,9 @@
      margin-top: 10px;
      text-align: center;
    }
+   .html {
+     border: solid black 1px;
+   }
    #reviewcol {
      text-align: center;
    }

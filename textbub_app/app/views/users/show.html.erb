@@ -9,7 +9,8 @@
       <p>Email: <%= @user.email%></p>
     </div>
     <div class="four columns col_one_title">
-      <h5>Embed Codes</h5>
+      <h5>Link to your TextBub Reviews</h5>
+      <a href=<%="https://textbub.herokuapp.com/users/" + @user.id.to_s%>><%="https://textbub.herokuapp.com/users/" + @user.id.to_s%></a>
     </div>
     <div class="four columns col_one_title">
       <h5>Reviews of <%= @user.name%> </h5>
