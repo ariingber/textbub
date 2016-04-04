@@ -14,7 +14,17 @@ class ReviewsController < ApplicationController
     splitBody = message_body.split()
     handle = splitBody[0]
     from_number = params["From"]
-    @review = Review.create(content: message_body, review_phone: from_number, handle: handle)
+    binding.pry
+    if Review.where(handle: handle).empty?
+      @review = Review.create(content: message_body, review_phone: from_number, handle: handle)
+    else
+      @review = Review.create(content: message_body, review_phone: from_number, handle: handle)
+        Review.where(handle: handle).each do |rev|
+          if rev.review_phone == @review.review_phone
+            @review.destroy
+          end
+        end
+    end
   end
 
   def show

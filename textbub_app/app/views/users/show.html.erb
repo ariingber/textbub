@@ -17,7 +17,7 @@
       <% @reviews.each do |review| %>
 
         <% if review.handle ==  @user.handle %>
-        <p>* <%= review.content %></p>
+        <p><%= review.content %></p>
         <% end %>
         <% end %>
       </div>
