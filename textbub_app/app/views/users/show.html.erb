@@ -7,20 +7,19 @@
       <p>Service Provided: <%= @user.service_provided%></p>
       <p>About: <%= @user.about_me%></p>
       <p>Email: <%= @user.email%></p>
-    </div>
-    <div class="four columns col_one_title">
-      <h5>Link to your TextBub Reviews</h5>
+      <p>Link To TextBub Reviews:</p>
       <a href=<%="https://textbub.herokuapp.com/users/" + @user.id.to_s%>><%="https://textbub.herokuapp.com/users/" + @user.id.to_s%></a>
     </div>
     <div class="four columns col_one_title">
-      <h5>Reviews of <%= @user.name%> </h5>
-
-      <% @reviews.each do |review| %>
-
-        <% if review.handle ==  @user.handle %>
-        <p><%= review.content %></p>
-        <% end %>
-        <% end %>
+      <h5><%= @user.name%>'s Reviews</h5>
+      <div class="scroll" style="height:290px;width:427px;border:1px solid #ccc;font:16px/26px; overflow:auto;">
+        <% @reviews.each do |review| %>
+          <% if review.handle ==  @user.handle %>
+          <p><%= review.content %></p>
+          <p>abbfnadkjbnvkfdanvkadnfvkefakv djkfskdhgdskjf,vn sfkjnvlkfj sfkjngklfsjng sfkjnv sga jahg akjga fldngj lafkvnj lafnvflkan lfkdnjfl kjfnvfl eakjnv lfakjhvaefl kjnvlkejvbfejklanv.ds  ehfglk jagk.afjnv. kafdfjnvl fakjn .dznfvlajkfnvl afkjnvlfkjfnl kfjangken kfejnglafejkhg.kajfng .kafnvaefjn vj jefnvlj bvnlk dznndn.k en.gknea.nlai envl.engkejnvliesjhfnlvke sflive ifn xd. nve,kdhv.idkxhvneir.kjnbvlaiezdfkjhg ;djhg aledzgnaei  ngl.aerzng li zdnbf gvli aeznvl z.dnvlienbdl</p>
+          <% end %>
+          <% end %>
+        </div>
       </div>
 </div>
 
