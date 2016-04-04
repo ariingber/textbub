@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
     handle = splitBody[0]
     from_number = params["From"]
     Review.where(handle: handle).each do |rev|
-      if rev.review_phone != from_number
+      if rev.review_phone == from_number
         @review = Review.create(content: message_body, review_phone: from_number, handle: handle)
       end
     end
