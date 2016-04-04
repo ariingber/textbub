@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
     @review = Review.create(content: message_body, review_phone: from_number, handle: handle)
     Review.where(handle: handle).each do |rev|
       if rev.review_phone == @review.review_phone
-        @review.delete
+        @review.destroy
       end
     end
 
