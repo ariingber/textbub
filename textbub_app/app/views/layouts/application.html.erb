@@ -12,20 +12,20 @@
       <div class="twelve columns">
         <ul class="nav">
           <% if session[:current_user_id] %>
-            <li><button>
+            <li><button class="button hvr-radial-out">
               <%= link_to "Logout", sessions_path, method: :delete %>
             </button></li>
-            <button><%= link_to "#{User.find(session[:current_user_id]).handle}'s profile",
+            <button class="button hvr-radial-out"><%= link_to "#{User.find(session[:current_user_id]).handle}'s profile",
               user_path(session[:current_user_id]) %></button>
           <% else %>
-            <li><button>
+            <li><button class="button hvr-radial-out">
               <%= link_to "Sign Up", new_user_path %>
             </button></li>
-            <li><button>
+            <li><button class="button hvr-radial-out">
               <%= link_to "Log In", users_path %>
             </button></li>
           <% end %>
-          <li><button>
+          <li><button class="button hvr-radial-out">
             <%= link_to "Search", new_browser_path %>
           </button></li>
         </ul>

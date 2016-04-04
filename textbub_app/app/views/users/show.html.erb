@@ -26,9 +26,9 @@
 
 <div class="row">
   <div class="twelve columns col_one_title">
-    <% if session[:current_user_id] %>
-      <button><%= link_to "Delete", user_path(@user), method: :delete %></button>
-      <button><%= link_to "Edit", edit_user_path(@user)  %></button>
+    <% if session[:current_user_id] && (@user.id == session[:current_user_id]) %>
+      <button class="button hvr-radial-out"><%= link_to "Delete", user_path(@user), method: :delete %></button>
+      <button class="button hvr-radial-out"><%= link_to "Edit", edit_user_path(@user)  %></button>
     <% end %>
   </div>
 </div>
