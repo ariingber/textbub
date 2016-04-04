@@ -4228,7 +4228,7 @@
   transition-duration: 0.3s;
 }
 .hvr-icon-bob:before {
-  content: "\f077";
+  content: "\f10b";
   position: absolute;
   right: 1em;
   padding: 0 1px;
