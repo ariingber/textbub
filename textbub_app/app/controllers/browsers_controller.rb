@@ -22,19 +22,19 @@ class BrowsersController < ApplicationController
     @city = params["city"]
     @zipcode = params["zipcode"]
     @users.each do |user|
-      if @name == user.name
+      if @name != '' && @name == user.name
         @results.push(user)
-      elsif @email == user.email
+      elsif @email != '' && @email == user.email
         @results.push(user)
-      elsif @handle == user.handle
+      elsif @handle != '' && @handle == user.handle
         @results.push(user)
-      elsif @service_provided == user.service_provided
+      elsif @service_provided != '' && @service_provided == user.service_provided
         @results.push(user)
-      elsif @business_name == user.business_name
+      elsif @business_name != '' && @business_name == user.business_name
         @results.push(user)
-      elsif @city == user.city
+      elsif @city != '' && @city == user.city
         @results.push(user)
-      elsif @zipcode == user.zipcode
+      elsif @zipcode != '' && @zipcode == user.zipcode
         @results.push(user)
       end
     @results

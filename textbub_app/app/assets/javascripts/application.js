@@ -15,16 +15,7 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function() {
-  $('#popup').hide();
-    $('#test').hover(function() {
-        $('#popup').show();
-    }, function() {
-        $('#popup').hide();
-    });
-    $('#popup2').hide();
-      $('#test2').hover(function() {
-          $('#popup2').show();
-      }, function() {
-          $('#popup2').hide();
-      });
+  $( "#how" ).click(function() {
+  alert( "Go fuck yourself elton!" );
+  });
 });

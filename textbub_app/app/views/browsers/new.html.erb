@@ -7,27 +7,28 @@
   <%= form_tag("./search", method: "get") do %>
     <div class=row>
       <div class="six columns col_one_title">
+
         <%= label_tag(:name, "User Name:") %>
-        <%= text_field_tag(:name) %>
+        <div class="hvr-underline-from-center"><%= text_field_tag(:name) %></div>
         <%= label_tag(:email, "Email:") %>
-        <%= text_field_tag(:email) %>
+        <div class="hvr-underline-from-center"><%= text_field_tag(:email) %></div>
         <%= label_tag(:handle, "User Handle:") %>
-        <%= text_field_tag(:handle) %>
+        <div class="hvr-underline-from-center"><%= text_field_tag(:handle) %></div>
         <%= label_tag(:business_name, "Busines Name:") %>
-        <%= text_field_tag(:business_name) %>
+        <div class="hvr-underline-from-center"><%= text_field_tag(:business_name) %></div>
       </div>
       <div class="six columns col_one_title">
         <%= label_tag(:service_provided, "Service Provided:") %>
-        <%= text_field_tag(:service_provided) %><br/>
+        <div class="hvr-underline-from-center"><%= text_field_tag(:service_provided) %></div><br/>
         <%= label_tag(:city, "City:") %>
-        <%= text_field_tag(:city) %><br/>
+        <div class="hvr-underline-from-center"><%= text_field_tag(:city) %></div><br/>
         <%= label_tag(:zipcode, "Zipcode:") %>
-        <%= text_field_tag(:zipcode) %><br/>
+        <div class="hvr-underline-from-center"><%= text_field_tag(:zipcode) %></div><br/>
       </div>
     </div>
     <div class=row>
       <div class="twelve columns col_one_title">
-        <%= submit_tag("Search") %>
+        <div class="hvr-underline-from-center"><%= submit_tag("Search") %></div>
         <% end %>
       </div>
     </div>

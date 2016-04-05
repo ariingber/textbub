@@ -42,7 +42,8 @@
    }
 
    .phoneimg {
-     border: solid black 3px;
+     border: solid black 1px;
+     border-radius: 20px;
      margin-left: 95px;
    }
    .ctitle {
@@ -63,7 +64,18 @@
      text-decoration: none;
      background-color: transparent;
    }
+   .num {
+     margin-top: -25px;
+   }
    .popup{
      margin-top: -3px;
      font-size: 8px;
    }
+  .about {
+    font-size: 12px;
+    width: 225px;
+    height: 125px;
+  }
+  .boxtitle {
+    text-align: left;
+  }

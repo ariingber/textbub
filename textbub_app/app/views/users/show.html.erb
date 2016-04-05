@@ -1,33 +1,47 @@
   <div class="row">
-    <div class="four columns col_one_title">
+    <div class="three columns col_one_title">
       <h5><%= @user.name%>'s Info</h5>
       <%= image_tag(@user.image(:medium), size: "150x150", class: "img-responsive") %>
       <p>Handle: <%= @user.handle%></p>
       <p>Business Name: <%= @user.business_name%></p>
       <p>Service Provided: <%= @user.service_provided%></p>
-      <p>About:</p><p> <%= @user.about_me%></p>
       <p>Email: <%= @user.email%></p>
+      <p>Street Address:</p>
+      <p> 111 Cherry Street </p>
       <p>City: <%= @user.city %> </p>
-      <p>Zip: <%= @user.zipcode %></p><br><br>
+      <p>Zip: <%= @user.zipcode %></p>
+      <p>Hours of Operation: </p>
+      <p>MTWTHF 9-5</p>
+      <p>Tel: 1(646)777-8080</p>
+      <p>
+        Link to Profile:
+        <br>
+        <a href=<%="https://textbub.herokuapp.com/users/" + @user.id.to_s%>><%="https://textbub.herokuapp.com/users/" + @user.id.to_s%></a>
+      </p><br><br>
     </div>
     <div class="four columns col_one_title">
-      <h5><%= @user.name%>'s Reviews</h5>
-      <div class="scroll" style="height:325px;width:427px;border:1px solid #ccc;font:16px/26px; overflow:auto;">
+      <h5 class="boxtitle"><%= @user.name%>'s Reviews</h5>
+      <div class="scroll" style="height:375px;width:300px;border:1px solid #ccc;font:16px/26px; overflow:auto;">
         <% @reviews.each do |review| %>
           <% if review.handle ==  @user.handle %>
           <p><%= review.content %></p>
-          <p>abbfnadkjbnvkfdanvkadnfvkefakv djkfskdhgdskjf,vn sfkjnvlkfj sfkjngklfsjng sfkjnv sga jahg akjga fldngj lafkvnj lafnvflkan lfkdnjfl kjfnvfl eakjnv lfakjhvaefl kjnvlkejvbfejklanv.ds  ehfglk jagk.afjnv. kafdfjnvl fakjn .dznfvlajkfnvl afkjnvlfkjfnl kfjangken kfejnglafejkhg.kajfng .kafnvaefjn vj jefnvlj bvnlk dznndn.k en.gknea.nlai envl.engkejnvliesjhfnlvke sflive ifn xd. nve,kdhv.idkxhvneir.kjnbvlaiezdfkjhg ;djhg aledzgnaei  ngl.aerzng li zdnbf gvli aeznvl z.dnvlienbdl</p>
           <% end %>
           <% end %>
         </div>
       </div>
+      <div class="four columns col_one_title">
+        <h5 class="boxtitle">About <%= @user.name%></h5>
+        <div class="scroll" style="height:375px;width:300px;border:1px solid #ccc;font:16px/26px; overflow:auto;">
+          <p><%= @user.about_me%></p>
+          </div>
+        </div>
 </div>
 
 <div class="row">
   <div class="twelve columns col_one_title">
     <% if session[:current_user_id] && (@user.id == session[:current_user_id]) %>
-      <button class="button hvr-radial-out"><%= link_to "Delete", user_path(@user), method: :delete %></button>
-      <button class="button hvr-radial-out"><%= link_to "Edit", edit_user_path(@user)  %></button>
+      <button class="hvr-underline-from-center"><%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you  want to delete your profile?"}%></button>
+      <button class="hvr-underline-from-center"><%= link_to "Edit", edit_user_path(@user)  %></button>
     <% end %>
   </div>
 </div>
