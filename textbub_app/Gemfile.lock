@@ -74,6 +74,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     execjs (2.6.0)
     font-awesome-rails (4.5.0.1)
@@ -207,6 +208,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   coffee-rails (~> 4.1.0)
   devise
+  dynamic_form
   font-awesome-rails
   hover-rails (~> 2.0, >= 2.0.2)
   jbuilder (~> 2.0)

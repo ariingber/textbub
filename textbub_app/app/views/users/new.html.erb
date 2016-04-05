@@ -8,12 +8,12 @@
   <div class=row>
     <div class="four columns col_one_title">
       <%= f.input :image %><br>
-      <%= f.label :name %>
-      <%= f.text_field :name%><br>
-      <%= f.label :email %>
-      <%= f.text_field :email %><br>
-      <%= f.label :handle %>
-      <%= f.text_field :handle%><br>
+      <%= f.label :name %><div class="popup">Name must be a string between 4 and 20 letters</div>
+      <div id="test" class="hvr-underline-from-center"><%= f.text_field :name%></div><br>
+      <%= f.label :email %><div class="popup">Email must be between 8 and 15 regular charechters</div>
+      <div id="test2" class="hvr-underline-from-center"><%= f.text_field :email %></div><br>
+      <%= f.label :handle %><div class="popup">Must start w/ @, be regular charecters, and be unique</div>
+      <div id="test2" class="hvr-underline-from-center"><%= f.text_field :handle%></div><br>
     </div>
       <div class="four columns col_one_title">
       <%= f.label :business_name %>
