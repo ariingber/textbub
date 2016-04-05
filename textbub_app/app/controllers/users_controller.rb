@@ -3,10 +3,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+
+
   def index
   end
-
-
   # def create
   #   @user = User.create(user_params)
   #   redirect_to user_path(@user)
@@ -19,9 +19,14 @@ class UsersController < ApplicationController
       session[:current_user_id] = @user.id
       redirect_to user_path(@user)
     else
+      @user.errors.messages.each do |key, value|
+        flash[key] = value
+      end
       redirect_to new_user_path(@user)
     end
   end
+
+
 
   def show
     @reviews = Review.all
@@ -44,6 +49,8 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to root_path
   end
+
+
 
   private
 
