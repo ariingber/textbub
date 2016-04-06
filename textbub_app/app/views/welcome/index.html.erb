@@ -1,14 +1,13 @@
 <% if session[:current_user_id] %>
   <h5>Hey, Thanks for Logging into TextBub</h5>
 <% else %>
-  <br><br>
 
   <div class="row">
-    <div class="four columns">
-      <button id="how" class="hvr-underline-from-center">What is textbub?</button><br>
-      <button id="how" class="hvr-underline-from-center">How's It work?</button>
+    <div class="twelve columns col_one_title">
+      <button id="how" class="hvr-underline-from-center">what is textbub?</button>
+      <button id="how" class="hvr-underline-from-center">how does it work</button>
+      <div><%= image_tag "phonegrab.PNG", size: "225x405", class: "phoneimg" %></div>
     </div>
-    <%= image_tag "phonegrab.PNG", size: "350x600", class: "phoneimg" %>
-</div>
+  </div>
 
 <% end %>

@@ -7,12 +7,12 @@
       <p>Service Provided: <%= @user.service_provided%></p>
       <p>Email: <%= @user.email%></p>
       <p>Street Address:</p>
-      <p> 111 Cherry Street </p>
+      <p> <%= @user.street_address %> </p>
       <p>City: <%= @user.city %> </p>
       <p>Zip: <%= @user.zipcode %></p>
       <p>Hours of Operation: </p>
-      <p>MTWTHF 9-5</p>
-      <p>Tel: 1(646)777-8080</p>
+      <p><%= @user.hours_of_operation %> </p>
+      <p>Tel: <%= @user.telephone %> </p>
       <p>
         Link to Profile:
         <br>
@@ -27,6 +27,7 @@
           <p><%= review.content %></p>
           <% end %>
           <% end %>
+          <button></button>
         </div>
       </div>
       <div class="four columns col_one_title">

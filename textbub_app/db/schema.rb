@@ -36,6 +36,9 @@ ActiveRecord::Schema.define(version: 20160331002218) do
     t.string   "zipcode"
     t.string   "city"
     t.string   "password_digest"
+    t.string   "street_address"
+    t.string   "hours_of_operation"
+    t.string   "telephone"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

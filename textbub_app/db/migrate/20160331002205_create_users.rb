@@ -11,6 +11,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :zipcode
       t.string :city
       t.string :password_digest
+      t.string :street_address
+      t.string :hours_of_operation
+      t.string :telephone
       t.timestamps
     end
   end

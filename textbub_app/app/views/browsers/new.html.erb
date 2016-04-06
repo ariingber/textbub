@@ -1,28 +1,31 @@
 <div class="search form">
   <div class ="row">
     <div class = "twelve colums">
-      <h5 class="col_one_title">Search By</h5>
+      <h5 class="col_one_title">search by</h5>
     </div>
   </div>
   <%= form_tag("./search", method: "get") do %>
     <div class=row>
-      <div class="six columns col_one_title">
+      <div class="three columns col_one_title"></div>
+      <div class="three columns col_one_title">
 
-        <%= label_tag(:name, "User Name:") %>
+        <%= label_tag(:name, "user name:") %>
         <div class="hvr-underline-from-center"><%= text_field_tag(:name) %></div>
-        <%= label_tag(:email, "Email:") %>
+        <%= label_tag(:email, "email:") %>
         <div class="hvr-underline-from-center"><%= text_field_tag(:email) %></div>
-        <%= label_tag(:handle, "User Handle:") %>
+        <%= label_tag(:handle, "user handle:") %>
         <div class="hvr-underline-from-center"><%= text_field_tag(:handle) %></div>
-        <%= label_tag(:business_name, "Busines Name:") %>
+        <%= label_tag(:business_name, "busines name:") %>
         <div class="hvr-underline-from-center"><%= text_field_tag(:business_name) %></div>
       </div>
-      <div class="six columns col_one_title">
-        <%= label_tag(:service_provided, "Service Provided:") %>
+      <div class="three columns col_one_title">
+        <%= label_tag(:service_provided, "service provided:") %>
         <div class="hvr-underline-from-center"><%= text_field_tag(:service_provided) %></div><br/>
-        <%= label_tag(:city, "City:") %>
+        <%= label_tag(:street_address, "address:") %>
+        <div class="hvr-underline-from-center"><%= text_field_tag(:street_address) %></div><br/>
+        <%= label_tag(:city, "city:") %>
         <div class="hvr-underline-from-center"><%= text_field_tag(:city) %></div><br/>
-        <%= label_tag(:zipcode, "Zipcode:") %>
+        <%= label_tag(:zipcode, "zipcode:") %>
         <div class="hvr-underline-from-center"><%= text_field_tag(:zipcode) %></div><br/>
       </div>
     </div>
