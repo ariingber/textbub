@@ -43,13 +43,12 @@ This application will allow people to leave one review (via text message) for ma
  - If You Liked Your Hair Cut from  Linda text a review to textbub @linda ... message  
 * As a text reviewer, I should be able to text textbub a review at that handle
 * As a text reviewer, after sending a text I should recieve a message, confirming that the review was posted with a link to the service providers home page [stretch].
-*
 ​
 
 #### Service Provider Seeker User Stroier
 * As a service provider seeker, I should be able to scan the site without logging in.
 * As a service provider seeker, I should be able to search a service provider by name, city, and service provided title.
 * As a service provider seeker, I should be able to search on a computer or an iphone.
-*
+
 ---
 ​
