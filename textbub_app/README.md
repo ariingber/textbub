@@ -20,8 +20,7 @@ This application will allow people to leave one review (via text message) for ma
 * gems - brcrypt
 ​
 ---
-<!-- ### Installation Instructions(To be Added): -->
----
+
 ​
 ### User Stories for Service Providers:
 #### Authentication
