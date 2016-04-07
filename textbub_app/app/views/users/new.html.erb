@@ -39,15 +39,17 @@
         <div class="hvr-underline-from-center"><%= f.text_field :city, :placeholder => "New York" %></div><br>
         <%= f.label :zipcode %>
         <div class="hvr-underline-from-center"><%= f.text_field :zipcode, :placeholder => "11106" %></div><br>
-        <%= f.label :hours_of_operation %>
+        <%= f.label :hours_of_op %>
         <div class="hvr-underline-from-center"><%= f.text_field :hours_of_operation, :placeholder => "MTWTHF 9-5" %></div><br>
     </div>
     <div class="two columns col_one_title">
       <div class="hvr-underline-from-center"><%= f.input :image %></div><br>
-      <%= f.label :about_me %>
-      <div class="hvr-underline-from-center"><%= f.text_area :about_me, :class => "about", :placeholder =>
-      "I'm just a boy with a dream." %></div><br><br>
-      
+      <div id="aboutbox">
+        <%= f.label :about_me %>
+        <div class="hvr-underline-from-center"><%= f.text_area :about_me, :class => "about", :placeholder =>
+        "I'm just a boy with a dream." %></div>
+      </div>
+
     </div>
 </div>
   <div class ="row">
