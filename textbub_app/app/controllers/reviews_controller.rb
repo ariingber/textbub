@@ -14,9 +14,9 @@ class ReviewsController < ApplicationController
     splitBody = message_body.split()
     handle = splitBody[0]
     from_number = params["From"]
-    unless(Review.handle_has_number(handle, from_number)){
+    unless Review.handle_has_number(handle, from_number)
       @review = Review.create(content: message_body, review_phone: from_number, handle: handle)
-    }
+    end
   end
 
   def show
