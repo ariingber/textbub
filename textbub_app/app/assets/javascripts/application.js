@@ -12,11 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 $(document).ready(function() {
+  console.log('javascript compiled!!!!');
   $( "#grabutton" ).click(function() {
-    var apple = $( "#reviewhtml" ).html()
+    var apple = $( "#reviewhtml" ).html();
+    console.log('test:', apple);
   alert( apple );
   });
 });

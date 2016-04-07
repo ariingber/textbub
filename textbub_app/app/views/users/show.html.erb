@@ -48,8 +48,9 @@
   <div class="twelve columns col_one_title">
     <% if session[:current_user_id] && (@user.id == session[:current_user_id]) %>
       <button class="hvr-underline-from-center"><%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you  want to delete your profile?"}%></button>
-      <button id="grabutton" class="hvr-underline-from-center"><%= link_to "Grab Your Comments HTML", user_path(@user)  %></button>
-      <button class="hvr-underline-from-center"><%= link_to "Edit", edit_user_path(@user)  %></button>
+      <button id="grabutton" class="hvr-underline-from-center">Grab Your Review HTML</button>
+      <button class="hvr-underline-from-center"><%= link_to " Edits ", edit_user_path(@user)  %></button>
+
     <% end %>
   </div>
 </div>
