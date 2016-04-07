@@ -3,8 +3,8 @@ Rails.application.configure do
     :storage => :s3,
     :s3_credentials => {
       :bucket => 'textbub',
-      :access_key_id => 'AKIAIELEJVN63ZFLHBUA',
-      :secret_access_key => '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'
+      :access_key_id => ENV["AWS_ACCESS_KEY_ID"],
+      :secret_access_key => ENV["AWS_SECRET_ACCESS_KEY"]
     }
   }
   # Settings specified here will take precedence over those in config/application.rb.
