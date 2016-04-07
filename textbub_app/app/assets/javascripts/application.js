@@ -15,7 +15,8 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function() {
-  $( "#how" ).click(function() {
-  alert( "Go fuck yourself elton!" );
+  $( "#grabutton" ).click(function() {
+    var apple = $( "#reviewhtml" ).html()
+  alert( apple );
   });
 });

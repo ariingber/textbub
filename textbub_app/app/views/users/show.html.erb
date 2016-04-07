@@ -25,7 +25,8 @@
     </div>
     <div class="one-third column scroll" style="height:300px;width:32%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
         <h5 class="ctitle"><%= @user.name%>'s Reviews</h5>
-        <div class="ctitle">
+
+        <div id="reviewhtml" class="ctitle">
           <% @reviews.each do |review| %>
             <% if review.handle ==  @user.handle %>
             <p><%= review.content %></p>
@@ -47,6 +48,7 @@
   <div class="twelve columns col_one_title">
     <% if session[:current_user_id] && (@user.id == session[:current_user_id]) %>
       <button class="hvr-underline-from-center"><%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Are you sure you  want to delete your profile?"}%></button>
+      <button id="grabutton" class="hvr-underline-from-center"><%= link_to "Grab Your Comments HTML", user_path(@user)  %></button>
       <button class="hvr-underline-from-center"><%= link_to "Edit", edit_user_path(@user)  %></button>
     <% end %>
   </div>
