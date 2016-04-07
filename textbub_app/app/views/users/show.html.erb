@@ -1,7 +1,7 @@
   <div class="row"><br><br>
     <div>
 
-    <div class="one-third column scroll" style="height:375px;width:30%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
+    <div class="one-third column scroll" style="height:300px;width:30%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
 
       <h5 class="ctitle"><%= @user.name%>'s Info</h5>
       <%= image_tag(@user.image(:medium), size: "150x150", class: "img-responsive") %>
@@ -23,7 +23,7 @@
       </p><br><br>
 
     </div>
-    <div class="one-third column scroll" style="height:375px;width:32%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
+    <div class="one-third column scroll" style="height:300px;width:32%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
         <h5 class="ctitle"><%= @user.name%>'s Reviews</h5>
         <div class="ctitle">
           <% @reviews.each do |review| %>
@@ -33,7 +33,7 @@
             <% end %>
         </div>
       </div>
-      <div class="one-third column scroll" style="height:375px;width:30%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
+      <div class="one-third column scroll" style="height:300px;width:30%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
 
           <h5 class="ctitle"> About <%= @user.name%></h5>
           <p><%= @user.about_me%></p>
@@ -41,7 +41,7 @@
         </div>
 
   </div>
-</div>
+</div><br>
 
 <div class="row">
   <div class="twelve columns col_one_title">

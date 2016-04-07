@@ -7,12 +7,11 @@
         <% end %>
   <% else %>
 </div>
-
   <div class="row">
     <div class="twelve columns col_one_title">
-      <button id="how" class="hvr-underline-from-center">what is textbub?</button>
-      <button id="how" class="hvr-underline-from-center">how does it work</button>
-      <div><%= image_tag "phonegrab.PNG", size: "225x405", class: "phoneimg" %></div>
+      <button class="hvr-underline-from-center" style="text-decoration:none"><%= link_to "what is textbub?",
+        about_path %></button><br>
+      <div class="hvr-underline-from-center"><%= image_tag "phonegrab.PNG", size: "205x385", class: "phoneimg" %></div>
     </div>
   </div>
 

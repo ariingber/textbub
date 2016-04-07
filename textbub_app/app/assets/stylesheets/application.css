@@ -39,7 +39,8 @@
    }
    .img-responsive{
      position: relative;
-     left: 27%;
+     left: 25%;
+     border-radius: 20px;
    }
    .navbutts {
      margin-top: -12px;
@@ -68,10 +69,12 @@
      background-color: transparent;
    }
    .num {
-     text-decoration: none;
-     color: black;
      font-size: 18px;
      margin-top: -25px;
+   }
+   .numtext {
+     text-decoration: none;
+     color: black;
    }
    .popup{
      margin-top: -3px;
