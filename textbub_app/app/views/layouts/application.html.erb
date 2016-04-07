@@ -14,13 +14,14 @@
         <ul class="nav">
           <a class="link" href="https://textbub.herokuapp.com">
             <h1 class= "hvr-underline-from-center">textbub</h1>
-          </a><br><h5 class="num">1(646)455-3611</h5>
+          </a><br><h5 class="num"><a href="/resource/textbub.vcf" download>1(646)455-3611</a></h5>
           <div class="navbutts">
             <% if session[:current_user_id] %>
               <li><button class="hvr-underline-from-center">
                 <%= link_to "logout", sessions_path, method: :delete %>
               </button></li>
-
+              <button class="hvr-underline-from-center"><%= link_to "#{User.find(session[:current_user_id]).handle}'s profile",
+                user_path(session[:current_user_id]) %></button>
             <% else %>
               <li><button class="hvr-underline-from-center">
                 <%= link_to "signup", new_user_path %>

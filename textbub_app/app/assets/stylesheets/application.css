@@ -33,9 +33,13 @@
      text-align: center;
    }
    p {
-     text-align: left;
+     text-align: center;
      margin-left: 15px;
      margin-bottom: -4px;
+   }
+   .img-responsive{
+     position: relative;
+     left: 27%;
    }
    .navbutts {
      margin-top: -12px;
@@ -64,6 +68,8 @@
      background-color: transparent;
    }
    .num {
+     text-decoration: none;
+     color: black;
      font-size: 18px;
      margin-top: -25px;
    }

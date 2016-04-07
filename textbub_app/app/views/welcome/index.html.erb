@@ -1,6 +1,12 @@
 <% if session[:current_user_id] %>
-  <h5>Hey, Thanks for Logging into TextBub</h5>
-<% else %>
+  <div class="ctitle"><br><br>
+  <h5>hey, thanks for logging into textbub</h5>
+    <% if session[:current_user_id] %>
+      <button class="hvr-underline-from-center"><%= link_to "head to your profile",
+        user_path(session[:current_user_id]) %></button><br><br>
+        <% end %>
+  <% else %>
+</div>
 
   <div class="row">
     <div class="twelve columns col_one_title">
