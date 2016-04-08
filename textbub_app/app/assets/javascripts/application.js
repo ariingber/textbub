@@ -14,10 +14,10 @@
 //= require jquery_ujs
 //= require_tree .
 $(document).ready(function() {
-  console.log('javascript compiled!!!!');
   $( "#grabutton" ).click(function() {
     var apple = $( "#reviewhtml" ).html();
     console.log('test:', apple);
   alert( apple );
   });
+  $('<audio autoplay src ="sounds/ari.mp3"></audio>');
 });

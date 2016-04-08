@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates_length_of :name, within: 4..20, too_long: 'pick a shorter name', too_short: 'pick a longer name'
   validates_length_of :business_name, maximum: 30, message: "must be less than 30 letters"
-  validates_length_of :about_me, maximum: 200, message: "must be less than 200 charecters"
+  validates_length_of :about_me, maximum: 600, message: "must be less than 600 charecters"
   validates_length_of :zipcode, minimum: 5, too_short: 'please enter at least 5 characters'
   validates :handle, presence: true, uniqueness: true
   has_secure_password
