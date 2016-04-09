@@ -27,9 +27,10 @@
         <h5 class="ctitle"><%= @user.name%>'s Reviews</h5>
 
         <div id="reviewhtml" class="ctitle">
+          <ol reversed>
           <% @reviews.each do |review| %>
             <% if review.handle ==  @user.handle %>
-            <ol reversed>
+
               <li><%= review.content %></li>
 
               <% end %>
