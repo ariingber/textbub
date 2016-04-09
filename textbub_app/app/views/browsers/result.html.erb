@@ -15,7 +15,9 @@
         <% city = result.city %>
         <p>Zip: <%= result.zipcode %></p>
         <% zip = result.city %>
-        <% query = "http://maps.google.com/?q="+street+city+zip %>
+        <% addey = street + " " + city + " " + zip %>
+        <% addey.gsub!(/\s/,'+') %>
+        <% query = "http://maps.google.com/?q=" + addey %>
         <p>Email: <%= result.email %></p>
         <p>Hours of Operation: </p>
         <p><%= result.hours_of_operation%></p>
