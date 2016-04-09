@@ -22,10 +22,10 @@
     </div>
     <div class="one-third column scroll" style="height:300px;width:32%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
       <h5 class="ctitle">Reviews of <%= result.name %></h5>
-      <p><%= @reviews.where(:handle == result.handle).count %> Reveiws </p>
+      <p style="text-decoration:underline; font-size:18px;"> <%= @reviews.where(:handle => @user.handle).count %> Reviews</p>
           <% @reviews.reverse_order!.each do |review| %>
             <% if review.handle == result.handle %>
-                <p> <%= review.content %></p>
+                <p style="font-size:14px;background-color:lightgrey;border-radius:25px;margin:5px;"> <%= review.content %></p>
               <% end %>
           <% end %>
     </div>

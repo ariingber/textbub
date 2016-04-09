@@ -27,10 +27,10 @@
         <h5 class="ctitle"><%= @user.name%>'s Reviews</h5>
 
         <div id="reviewhtml" class="ctitle">
-          <p><%= @reviews.where(:handle == result.handle).count %> Reveiws </p>
+          <p style="text-decoration:underline; font-size:18px;"> <%= @reviews.where(:handle => @user.handle).count %> Reviews</p>
           <% @reviews.reverse_order!.each do |review| %>
             <% if review.handle ==  @user.handle %>
-            <p><%= review.content %></p>
+            <p style="font-size:14px;background-color:lightgrey;border-radius:25px;margin:5px;"><%= review.content %></p>
             <% end %>
             <% end %>
         </div>
