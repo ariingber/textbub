@@ -22,13 +22,11 @@
     </div>
     <div class="one-third column scroll" style="height:300px;width:32%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
       <h5 class="ctitle">Reviews of <%= result.name %></h5>
-        <ol reversed>
-          <% @reviews.reverse!.each do |review| %>
+          <% @reviews.reverse_order!.each do |review| %>
             <% if review.handle == result.handle %>
-                <li> <%= review.content %></li>
+                <p> <%= review.content %></p>
               <% end %>
           <% end %>
-        </ol>
     </div>
   <div class="one-third column scroll" style="height:300px;width:30%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
     <h5 class="ctitle">About <%= result.name%></h5>
