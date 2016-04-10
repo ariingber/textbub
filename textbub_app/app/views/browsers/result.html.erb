@@ -31,9 +31,9 @@
           <p style="text-align:center"><a href= <%=query%> >directions to <%= result.business_name %></a></p>
       <h5 class="ctitle">Reviews of <%= result.name %></h5>
       <p style="text-decoration:underline; font-size:18px; margin-top:-10px;"> <%= @reviews.where(:handle => result.handle).count %> Reviews</p>
-          <% @reviews.reverse_order!.each do |review| %>
+          <% @reviews.reverse_order.each do |review| %>
             <% if review.handle == result.handle %>
-                <p style="font-size:14px;background-color:lightgrey;border-radius:25px;margin:5px;"> <%= review.content %></p>
+                <p style="font-size:14px;background-color:rgba(0, 0, 0, 0.5);margin:5px;"> <%= review.content %></p>
               <% end %>
           <% end %>
     </div>
