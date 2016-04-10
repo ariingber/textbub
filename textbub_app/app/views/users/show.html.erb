@@ -4,8 +4,6 @@
     <div class="one-third column scroll" style="height:300px;width:30%;border:1px solid #ccc;font:16px/26px; overflow:auto;position: relative;">
 
       <h5 class="ctitle"><%= @user.name%>'s Info</h5>
-      <% @user.image %>
-      <% binding.pry %>
       <%= image_tag(@user.image(:medium), size: "150x150", class: "img-responsive") %>
       <p>Handle: <%= @user.handle%></p>
       <p>Business Name: <%= @user.business_name%></p>
