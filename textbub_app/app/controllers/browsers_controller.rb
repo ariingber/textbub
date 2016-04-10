@@ -22,19 +22,19 @@ class BrowsersController < ApplicationController
     @city = params["city"]
     @zipcode = params["zipcode"]
     @users.each do |user|
-      if @name != '' && @name.downcase == user.name.downcase
+      if @name != '' && user.name.downcase.split.join('').include?(@name.downcase.split.join(''))
         @results.push(user)
-      elsif @email != '' && @email.downcase == user.email.downcase
+      elsif @email != '' && user.email.downcase.split.join('').include?(@email.downcase.split.join(''))
         @results.push(user)
-      elsif @handle != '' && @handle.downcase == user.handle.downcase
+      elsif @handle != '' && user.handle.downcase.split.join('').include?(@handle.downcase.split.join(''))
         @results.push(user)
-      elsif @service_provided != '' && @service_provided.downcase == user.service_provided.downcase
+      elsif @service_provided != '' && user.service_provided.downcase.split.join('').include?(@service_provided.downcase.split.join(''))
         @results.push(user)
-      elsif @business_name != '' && @business_name.downcase == user.business_name.downcase
+      elsif @business_name != '' && user.business_name.downcase.split.join('').include?(@business_name.downcase.split.join(''))
         @results.push(user)
-      elsif @city != '' && @city.downcase == user.city.downcase
+      elsif @city != '' && user.city.downcase.split.join('').include?(@city.downcase.split.join(''))
         @results.push(user)
-      elsif @zipcode != '' && @zipcode == user.zipcode
+      elsif @zipcode != '' && user.zipcode.split.join('').include?(@zipcode.split.join(''))
         @results.push(user)
       end
     @results

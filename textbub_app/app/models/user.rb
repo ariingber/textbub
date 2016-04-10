@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   validates_with HandleValidator
   has_attached_file :image, styles: { :medium => "640x" }
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
-  validates :name, presence: true
+  validates :name, presence: true, format: {with: /\A(([a-z0-9])+(-?[a-z0-9]+)*\s?)+\Z/, message: "name can't be blank. Characters can only be [a-z 0-9 . # - +]"}
   validates_length_of :name, within: 4..20, too_long: 'pick a shorter name', too_short: 'pick a longer name'
   validates_length_of :business_name, maximum: 30, message: "must be less than 30 letters"
   validates_length_of :about_me, maximum: 600, message: "must be less than 600 charecters"
