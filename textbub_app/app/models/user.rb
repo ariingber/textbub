@@ -1,9 +1,4 @@
 class User < ActiveRecord::Base
-  has_attached_file :image,
-    :path => "public/system/:class/:id/:filename",
-    :url => "/system/:class/:id/:basename.:extension"
-
-src="/system/users/images/000/000/015/medium/Angie.jpg"
   # has_attached_file :image,
   #                 :storage => :s3,
   #                 :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
