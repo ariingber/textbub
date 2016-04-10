@@ -33,7 +33,7 @@
       <p style="text-decoration:underline; font-size:18px; margin-top:-10px;"> <%= @reviews.where(:handle => result.handle).count %> Reviews</p>
           <% @reviews.reverse_order.each do |review| %>
             <% if review.handle == result.handle %>
-                <p style="font-size:14px;background-color:rgba(0, 0, 0, 0.5);margin:5px;"> <%= review.content %></p>
+                <p style="font-size:14px; border-radius:5px; background-color:rgba(0, 0, 0, 0.1); padding:2px; margin:5px;"> <%= review.content %></p>
               <% end %>
           <% end %>
     </div>
