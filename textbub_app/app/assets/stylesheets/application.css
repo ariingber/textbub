@@ -103,8 +103,9 @@
   }
 
 
-  @media only screen and (max-width : 667px)  {
-    body {
-      background-color: blue;
+  @media only screen and (max-width : 667px)
+  {
+    #box1 {
+      display: block;
     }
 }

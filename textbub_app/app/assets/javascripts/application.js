@@ -19,5 +19,4 @@ $(document).ready(function() {
     console.log('test:', apple);
   alert( apple );
   });
-  $('<audio autoplay src ="sounds/ari.mp3"></audio>');
 });
