@@ -7,7 +7,7 @@ textbub is an easy way to leave a review for a service provider -- via text.
 ### Introduction
 This application will allow people to leave one review (via text message) for many service providers with profiles on textbub.  Users can also check this site to see other peoples' reviews of specific service providers and service providers can create textbub profiles.
 ​
-### Notes on Exploring The Site
+### Notes on Exploring The Site (Guests, Visitors)
 While the site is still in development process, for the purpose of demonstration, the site has been seeded with five fake entries of pho-service providers who are hair stylists in the east village of new york.  You can use search and browse these profiles as a browser or leave reviews for these service providers (@MindyCutsRUs, @JohnUnisex ect.) to see how textbub works.  If you want to log in you can use the handle @MindyCutsRUs (or any other seeded handle) with the password test, and log onto the site as if you have a profile.  If you  want you can also set up a profile.
 
 
