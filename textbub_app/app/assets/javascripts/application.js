@@ -16,7 +16,6 @@
 $(document).ready(function() {
   $( "#grabutton" ).click(function() {
     var apple = $( "#reviewhtml" ).html();
-    console.log('test:', apple);
   alert( apple );
   });
 });
